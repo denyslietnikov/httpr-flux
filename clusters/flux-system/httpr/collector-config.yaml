@@ -4,14 +4,13 @@ metadata:
   name: collector-config
   namespace: httpr
 data:
-  otel-collector-contrig.yaml: |
+  otel-collector-config.yaml: |
     receivers:
       otlp:
         protocols:
           grpc:
           http:
             endpoint: "0.0.0.0:3030"
-
     exporters:
       logging:
       loki:
@@ -22,7 +21,6 @@ data:
         endpoint: jaeger:14250
         tls:
           insecure: true
-
     service:
       pipelines:
         logs:
