@@ -5,11 +5,11 @@ metadata:
   namespace: httpr
 data:
   jaeger-ui.json: |
-    {
-    "monitor": {
-      "menuEnabled": true
-    },
-    "dependencies": {
-      "menuEnabled": true
-    }
-    }
+   {
+     "monitor": {
+       "menuEnabled": true
+     },
+     "dependencies": {
+       "menuEnabled": true
+     }
+   }
