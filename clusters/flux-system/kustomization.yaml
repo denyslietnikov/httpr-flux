@@ -21,3 +21,7 @@ resources:
 - ./httpr/grafana-deployment.yaml
 - ./httpr/grafana-service.yaml
 - ./httpr/grafana-config.yaml
+
+- ./httpr/jaeger-deployment.yaml
+- ./httpr/jaeger-service.yaml
+- ./httpr/jaeger-config.yaml

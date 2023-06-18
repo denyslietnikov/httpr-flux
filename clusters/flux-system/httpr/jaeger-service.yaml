@@ -4,10 +4,10 @@ metadata:
   annotations:
     kompose.cmd: kompose convert
     kompose.version: 1.28.0 (c4137012e)
-  creationTimestamp: null
   labels:
     io.kompose.service: jaeger
   name: jaeger
+  namespace: httpr
 spec:
   ports:
     - name: "14250"
