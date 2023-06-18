@@ -17,4 +17,4 @@ data:
 
       - job_name: 'prometheus'
         static_configs:
-          - targets: [ 'prometheus:9090' ]
+          - targets: [ 'localhost:9090' ]
