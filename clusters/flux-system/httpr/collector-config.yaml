@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: collector-config
+  name: otel-collector-config
   namespace: httpr
 data:
   otel-collector-config.yaml: |

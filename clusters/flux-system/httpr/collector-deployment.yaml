@@ -78,11 +78,11 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /etc/otel-collector-config.yaml
-              name: collector-config
+              name: otel-collector-config
       volumes:
-        - name: collector-config
+        - name: otel-collector-config
           configMap:
-            name: collector-config
+            name: otel-collector-config
 #        - name: collector-claim0
 #          persistentVolumeClaim:
 #            claimName: collector-claim0
