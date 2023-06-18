@@ -83,7 +83,7 @@ spec:
         - name: collector-config
           configMap:
             name: collector-config
-        - name: collector-claim0
-          persistentVolumeClaim:
-            claimName: collector-claim0
+#        - name: collector-claim0
+#          persistentVolumeClaim:
+#            claimName: collector-claim0
 status: {}
