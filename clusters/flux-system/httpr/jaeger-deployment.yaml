@@ -28,6 +28,7 @@ spec:
         - args:
             - --query.ui-config
             - /etc/jaeger/jaeger-ui.json
+            - --sampling.strategies-file=/etc/jaeger/sampling_strategies.json
           image: jaegertracing/all-in-one:latest
           name: jaeger
           ports:
