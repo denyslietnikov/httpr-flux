@@ -4,7 +4,7 @@ metadata:
   name: collector-config
   namespace: httpr
 data:
-  otel-collector-contrib.yaml: |
+  otel-collector-contrig.yaml: |
     receivers:
       otlp:
         protocols:
