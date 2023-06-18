@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - args:
-            - --config.file=/etc/prometheus/prometheus.yaml
+            - --config.file=/etc/prometheus.yaml
             - --web.enable-remote-write-receiver
             - --enable-feature=exemplar-storage
           image: prom/prometheus:latest
@@ -35,7 +35,7 @@ spec:
             - containerPort: 9090
           resources: {}
           volumeMounts:
-            - mountPath: /etc/prometheus
+            - mountPath: /etc
               name: prometheus-config
       volumes:
         - name: prometheus-config
