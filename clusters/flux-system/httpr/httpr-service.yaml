@@ -9,13 +9,16 @@ metadata:
   name: httpr
   namespace: httpr
 spec:
+  type: NodePort
   ports:
     - name: "8181"
       port: 8181
       targetPort: 8181
+      nodePort: 30001
     - name: "8282"
       port: 8282
       targetPort: 8282
+      nodePort: 30002
   selector:
     io.kompose.service: httpr
 status:
