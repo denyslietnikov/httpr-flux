@@ -4,6 +4,7 @@ metadata:
   labels:
     io.kompose.service: collector-claim0
   name: collector-claim0
+  namespace: httpr
 spec:
   accessModes:
     - ReadWriteOnce
