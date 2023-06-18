@@ -3,4 +3,7 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+
 - ./httpr/httpr-namespace.yaml
+- ./httpr/httpr-service.yaml
+- ./httpr/httpr-deployment.yaml
