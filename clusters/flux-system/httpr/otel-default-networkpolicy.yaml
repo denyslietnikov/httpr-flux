@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  creationTimestamp: null
   name: otel-default
+  namespace: httpr
 spec:
   ingress:
     - from:

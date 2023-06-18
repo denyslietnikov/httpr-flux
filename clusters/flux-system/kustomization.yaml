@@ -7,3 +7,11 @@ resources:
 - ./httpr/httpr-namespace.yaml
 - ./httpr/httpr-service.yaml
 - ./httpr/httpr-deployment.yaml
+
+- ./httpr/collector-claim0-persistentvolumeclaim.yaml
+- ./httpr/collector-deployment.yaml
+- ./httpr/collector-service.yaml
+- ./httpr/otel-default-networkpolicy.yaml
+- ./httpr/prometheus-claim0-persistentvolumeclaim.yaml
+- ./httpr/prometheus-deployment.yaml
+- ./httpr/prometheus-service.yaml
