@@ -70,7 +70,7 @@ spec:
     spec:
       containers:
         - args:
-            - --config=/etc/otel-collector-config.yaml
+            - --config=/etc/otel/otel-collector-config.yaml
           image: otel/opentelemetry-collector-contrib:0.78.0
           name: collector
           ports:
