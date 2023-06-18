@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -12,4 +13,18 @@ data:
      "dependencies": {
        "menuEnabled": true
      }
+   }
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sampling-strategies
+  namespace: httpr
+data:
+  sampling_strategies.json: |
+   {
+     "default_strategy": {
+       "type": "probabilistic",
+       "param": 1
+      }
    }

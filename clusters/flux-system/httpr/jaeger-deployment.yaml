@@ -28,7 +28,7 @@ spec:
         - args:
             - --query.ui-config
             - /etc/jaeger/jaeger-ui.json
-            - --sampling.strategies-file=/etc/jaeger/sampling_strategies.json
+            - --sampling.strategies-file=/etc/jaeger/strategie/sampling_strategies.json
           image: jaegertracing/all-in-one:latest
           name: jaeger
           ports:
@@ -42,9 +42,14 @@ spec:
           volumeMounts:
             - mountPath: /etc/jaeger
               name: jaeger-ui
+            - mountPath: /etc/jaeger/strategie
+              name: sampling-strategies
       restartPolicy: Always
       volumes:
         - name: jaeger-ui
           configMap:
             name: jaeger-ui
+        - name: sampling-strategies
+          configMap:
+            name: sampling-strategies
 status: {}
