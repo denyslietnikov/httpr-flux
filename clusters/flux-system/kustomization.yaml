@@ -34,8 +34,8 @@ resources:
 #- ./httpr/fluentbit-service.yaml
 #- ./httpr/fluentbit-config.yaml
 
-- ./httpr/configmap.yaml
-- ./httpr/gke.yaml
-- ./httpr/role-binding.yaml
-- ./httpr/role.yaml
-- ./httpr/service-account.yaml
+- ./httpr/fluentbit-configmap.yaml
+- ./httpr/fluentbit-gke.yaml
+- ./httpr/fluentbit-role-binding.yaml
+- ./httpr/fluentbit-role.yaml
+- ./httpr/fluentbit-service-account.yaml
