@@ -22,13 +22,13 @@ resources:
 - ./httpr/grafana-service.yaml
 - ./httpr/grafana-config.yaml
 
-#- ./httpr/jaeger-deployment.yaml
-#- ./httpr/jaeger-service.yaml
-#- ./httpr/jaeger-config.yaml
+- ./httpr/jaeger-deployment.yaml
+- ./httpr/jaeger-service.yaml
+- ./httpr/jaeger-config.yaml
 
-#- ./httpr/loki-deployment.yaml
-#- ./httpr/loki-service.yaml
-#- ./httpr/loki-config.yaml
+- ./httpr/loki-deployment.yaml
+- ./httpr/loki-service.yaml
+- ./httpr/loki-config.yaml
 
 #- ./httpr/fluentbit-deployment.yaml
 #- ./httpr/fluentbit-service.yaml
