@@ -6,7 +6,7 @@ metadata:
     kompose.version: 1.28.0 (c4137012e)
   labels:
     io.kompose.service: fluentbit
-  name: fluentbit
+  name: fluent-bit
   namespace: httpr
 spec:
   ports:
