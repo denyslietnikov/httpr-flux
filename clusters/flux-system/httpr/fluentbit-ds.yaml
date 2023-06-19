@@ -3,8 +3,8 @@ kind: DaemonSet
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-    meta.helm.sh/release-name: fluent-bit
-    meta.helm.sh/release-namespace: default
+    kompose.cmd: kompose convert
+    kompose.version: 1.28.0 (c4137012e)
   generation: 1
   labels:
     app.kubernetes.io/instance: fluent-bit

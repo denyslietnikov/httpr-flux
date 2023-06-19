@@ -67,8 +67,8 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    meta.helm.sh/release-name: dynatrace
-    meta.helm.sh/release-namespace: default
+    kompose.cmd: kompose convert
+    kompose.version: 1.28.0 (c4137012e)
   labels:
     app: fluent-bit-loki
     chart: fluent-bit-2.2.0
