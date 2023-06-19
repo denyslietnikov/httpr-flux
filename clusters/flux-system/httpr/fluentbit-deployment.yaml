@@ -43,6 +43,8 @@ spec:
               mountPath: /host/sys
             - name: docker-socket
               mountPath: /var/run/docker.sock
+            - name: docker-macos-logs
+              mountPath: /var/log/containers
       restartPolicy: Always
       volumes:
         - name: docker-metadata
@@ -63,4 +65,7 @@ spec:
         - name: docker-socket
           hostPath:
             path: /var/run/docker.sock
+        - name: docker-macos-logs
+          hostPath:
+            path: /Users/denyslietnikov/Library/Containers/com.docker.docker/Data/log/vm
 status: {}
