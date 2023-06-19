@@ -34,7 +34,7 @@ spec:
             - name: docker-metadata
               mountPath: /fluent-bit/bin/docker-metadata              
             - name: fluent-bit-config
-              mountPath: /fluent-bit/etc/            
+              mountPath: /fluent-bit/etc/config            
             - name: varlog
               mountPath: /var/log
             - name: varlibdockercontainers
