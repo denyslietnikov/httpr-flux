@@ -4,7 +4,6 @@ metadata:
   annotations:
     kompose.cmd: kompose convert
     kompose.version: 1.28.0 (c4137012e)
-  creationTimestamp: null
   labels:
     io.kompose.service: loki
   name: loki
@@ -20,7 +19,6 @@ spec:
       annotations:
         kompose.cmd: kompose convert
         kompose.version: 1.28.0 (c4137012e)
-      creationTimestamp: null
       labels:
         io.kompose.network/otel-default: "true"
         io.kompose.service: loki
@@ -35,11 +33,11 @@ spec:
             - containerPort: 3100
           resources: {}
           volumeMounts:
-            - mountPath: /etc/loki/local-config.yaml
-              name: loki-claim0
+            - mountPath: /etc/loki/
+              name: loki-config
       restartPolicy: Always
       volumes:
-        - name: loki-claim0
-          persistentVolumeClaim:
-            claimName: loki-claim0
+        - name: loki-config
+          configMap:
+            name: loki-config
 status: {}
