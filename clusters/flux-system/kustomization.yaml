@@ -30,6 +30,12 @@ resources:
 - ./httpr/loki-service.yaml
 - ./httpr/loki-config.yaml
 
-- ./httpr/fluentbit-deployment.yaml
-- ./httpr/fluentbit-service.yaml
-- ./httpr/fluentbit-config.yaml
+#- ./httpr/fluentbit-deployment.yaml
+#- ./httpr/fluentbit-service.yaml
+#- ./httpr/fluentbit-config.yaml
+
+- ./fluent-bit/configmap.yaml
+- ./fluent-bit/gke.yaml
+- ./fluent-bit/role-binding.yaml
+- ./fluent-bit/role.yaml
+- ./fluent-bit/service-account.yaml
