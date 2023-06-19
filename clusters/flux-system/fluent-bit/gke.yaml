@@ -8,6 +8,8 @@ metadata:
     version: v1
     kubernetes.io/cluster-service: "true"
 spec:
+  selector:
+    name: httpr
   template:
     metadata:
       labels:
