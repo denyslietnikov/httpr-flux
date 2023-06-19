@@ -12,7 +12,6 @@ data:
 
     [INPUT]
       Name   tail
-      #Path   /var/lib/docker/containers/*/*.log
       Path    /var/log/containers/*.log
       Parser docker
       Refresh_Interval 30
