@@ -28,7 +28,7 @@ data:
 
     [OUTPUT]
       Name                 opentelemetry
-      Match                source.docker.*
+      Match                kube.*
       Host                 collector
       Port                 3030
       metrics_uri          /v1/metrics
