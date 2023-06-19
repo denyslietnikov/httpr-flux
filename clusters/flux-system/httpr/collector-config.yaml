@@ -17,10 +17,10 @@ data:
         endpoint: http://loki:3100/loki/api/v1/push
       prometheus:
         endpoint: prometheus:8889
-      jaeger: 
-        endpoint: jaeger:14250
-        tls:
-          insecure: true
+      #jaeger: 
+      #  endpoint: jaeger:14250
+      #  tls:
+      #    insecure: true
     service:
       pipelines:
         logs:
