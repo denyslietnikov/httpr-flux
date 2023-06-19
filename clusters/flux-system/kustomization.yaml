@@ -39,3 +39,6 @@ resources:
 #- ./httpr/fluentbit-role-binding.yaml
 #- ./httpr/fluentbit-role.yaml
 #- ./httpr/fluentbit-service-account.yaml
+
+- ./httpr/fluentbit_configmap_loki.yaml
+- ./httpr/fluentbit_ds.yaml
