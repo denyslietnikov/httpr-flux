@@ -31,9 +31,9 @@ spec:
             - containerPort: 3001
           resources: {}
           volumeMounts:
-            - mountPath: /fluent-bit/bin/
+            - mountPath: /fluent-bit/bin/fluent-bit
               name: docker-metadata
-            - mountPath: /fluent-bit/etc/
+            - mountPath: /fluent-bit/etc/fluent-bit
               name: fluent-bit-conf
             - name: var-volume
               mountPath: /var
