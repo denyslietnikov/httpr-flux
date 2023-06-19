@@ -23,7 +23,7 @@ data:
     [FILTER]
       Name   lua
       Match  source.docker.*
-      script /fluent-bit/bin/docker-metadata.lua
+      script /fluent-bit/bin/docker-metadata/docker-metadata.lua
       call   encrich_with_docker_metadata
 
     [OUTPUT]
