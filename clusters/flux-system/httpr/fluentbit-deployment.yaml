@@ -31,32 +31,37 @@ spec:
             - containerPort: 3001
           resources: {}
           volumeMounts:
-            - mountPath: /fluent-bit/bin/docker-metadata
-              name: docker-metadata
-            - mountPath: /fluent-bit/etc/fluent-bit
-              name: fluent-bit-conf
-            - name: var-volume
-              mountPath: /var
-            - name: proc-volume
-              mountPath: /host/proc
-            - name: sys-volume
-              mountPath: /host/sys
+            - name: docker-metadata
+              mountPath: /fluent-bit/bin/docker-metadata              
+            - name: fluent-bit-config
+              mountPath: /fluent-bit/etc/
+            
+            - name: varlog
+              mountPath: /var/log
+            - name: varlibdockercontainers
+              mountPath: /var/lib/docker/containers
+              readOnly: true
+            - name: mnt
+              mountPath: /mnt
+              readOnly: true            
       restartPolicy: Always
       volumes:
         - name: docker-metadata
           configMap:
             name: docker-metadata
-        - name: fluent-bit-conf
+        - name: fluent-bit-config
           configMap:
-            name: fluent-bit-conf
-        - name: var-volume
+            name: fluent-bit-config
+        - name: varlog
           hostPath:
-            path: /var
-        - name: proc-volume
+            path: /var/log
+        - name: varlibdockercontainers
           hostPath:
-            path: /proc
-        - name: sys-volume
+            path: /var/lib/docker/containers
+        - name: fluent-bit-etc
+          configMap:
+            name: fluent-bit-config
+        - name: mnt
           hostPath:
-            path: /sys
-
+            path: /mnt
 status: {}

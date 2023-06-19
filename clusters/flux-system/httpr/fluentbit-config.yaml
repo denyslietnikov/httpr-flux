@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: fluent-bit-conf
+  name: fluent-bit-config
   namespace: httpr
 data:
   fluent-bit.conf: |
@@ -11,14 +11,14 @@ data:
       log_level error
 
     [INPUT]
-      Name   tail
-      Path    /var/log/containers/*.log
-      Parser docker
+      Name             tail
+      Path             /var/log/containers/*.log
+      Parser           docker
       Refresh_Interval 30
-      Ignore_Older 6h
-      Docker_Mode  On
-      Tag source.docker.<container_id>
-      Tag_Regex (.*\/(?<container_id>.*)-json\.log)
+      Ignore_Older     6h
+      Docker_Mode      On
+      Tag              kube.*
+      #Tag_Regex       (.*\/(?<container_id>.*)-json\.log)
 
     [FILTER]
       Name   lua
