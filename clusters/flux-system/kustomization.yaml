@@ -40,5 +40,5 @@ resources:
 #- ./httpr/fluentbit-role.yaml
 #- ./httpr/fluentbit-service-account.yaml
 
-- ./httpr/fluentbit_configmap_loki.yaml
-- ./httpr/fluentbit_ds.yaml
+- ./httpr/fluentbit-configmap-loki.yaml
+- ./httpr/fluentbit-ds.yaml
