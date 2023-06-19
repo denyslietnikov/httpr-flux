@@ -43,6 +43,9 @@ spec:
               mountPath: /host/sys
       restartPolicy: Always
       volumes:
+        - name: docker-metadata
+          configMap:
+            name: docker-metadata
         - name: fluent-bit-conf
           configMap:
             name: fluent-bit-conf
