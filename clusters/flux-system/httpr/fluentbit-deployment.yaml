@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.28.0 (c4137012e)
+  labels:
+    io.kompose.service: fluentbit
+  name: fluentbit
+  namespace: httpr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: fluentbit
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.28.0 (c4137012e)
+      labels:
+        io.kompose.network/otel-default: "true"
+        io.kompose.service: fluentbit
+    spec:
+      containers:
+        - image: fluent/fluent-bit:latest
+          name: fluentbit
+          ports:
+            - containerPort: 3001
+          resources: {}
+          volumeMounts:
+            - mountPath: /fluent-bit/bin/
+              name: docker-metadata
+            - mountPath: /fluent-bit/etc/
+              name: fluent-bit-conf
+            - name: var-volume
+              mountPath: /var
+            - name: proc-volume
+              mountPath: /host/proc
+            - name: sys-volume
+              mountPath: /host/sys
+      restartPolicy: Always
+      volumes:
+        - name: fluent-bit-conf
+          configMap:
+            name: fluent-bit-conf
+        - name: var-volume
+          hostPath:
+            path: /var
+        - name: proc-volume
+          hostPath:
+            path: /proc
+        - name: sys-volume
+          hostPath:
+            path: /sys
+status: {}

@@ -29,3 +29,7 @@ resources:
 - ./httpr/loki-deployment.yaml
 - ./httpr/loki-service.yaml
 - ./httpr/loki-config.yaml
+
+- ./httpr/fluentbit-deployment.yaml
+- ./httpr/fluentbit-service.yaml
+- ./httpr/fluentbit-config.yaml
