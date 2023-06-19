@@ -17,3 +17,4 @@ spec:
     io.kompose.service: fluentbit
 status:
   loadBalancer: {}
+  

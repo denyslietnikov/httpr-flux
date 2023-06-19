@@ -43,7 +43,6 @@ data:
         LogLevel warn
 
 
-
   labelmap.json: |-
     {
       "kubernetes": {
