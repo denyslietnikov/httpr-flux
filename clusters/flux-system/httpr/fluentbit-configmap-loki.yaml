@@ -8,7 +8,8 @@ metadata:
     app: fluent-bit-loki
     chart: fluent-bit-2.2.0
     heritage: Helm
-  name: loki-fluent-bit-loki
+  #name: loki-fluent-bit-loki
+  name: fluent-bit
   namespace: httpr
 data:
   fluent-bit.conf: |-
