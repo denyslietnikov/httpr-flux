@@ -40,19 +40,32 @@ data:
 
 
     [OUTPUT]
-        Name grafana-loki
-        Match *
-        Url http://loki:3100/api/prom/push
-        TenantID ""
-        BatchWait 1
-        BatchSize 1048576
-        Labels {job="fluent-bit",stream=$stream }
-        RemoveKeys kubernetes,stream
-        AutoKubernetesLabels true
-        LabelMapPath /fluent-bit/etc/labelmap.json
-        LineFormat json
-        LogLevel warn
-
+        # Name grafana-loki
+        # Match *
+        # Url http://loki:3100/api/prom/push
+        # TenantID ""
+        # BatchWait 1
+        # BatchSize 1048576
+        # Labels {job="fluent-bit",stream=$stream }
+        # RemoveKeys kubernetes,stream
+        # AutoKubernetesLabels true
+        # LabelMapPath /fluent-bit/etc/labelmap.json
+        # LineFormat json
+        # LogLevel warn'
+        
+        Name opentelemetry
+        Match                *
+        Host                 collector
+        Port                 3030
+        metrics_uri          /v1/metrics
+        logs_uri             /v1/logs
+        traces_uri           /v1/traces
+        Log_response_payload True
+        tls                  off
+        tls.verify           off
+        # add user-defined labels
+        add_label            app fluent-bit
+        add_label            color blue
 
   labelmap.json: |-
     {

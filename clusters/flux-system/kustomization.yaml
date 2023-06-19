@@ -44,4 +44,4 @@ resources:
 - ./httpr/fluentbit-ds.yaml
 - ./httpr/fluentbit-service.yaml
 - ./httpr/fluentbit-serviceaccount.yaml
-- ./httpr/fluentbit-configmap.yaml
+#- ./httpr/fluentbit-configmap-template.yaml
