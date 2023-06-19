@@ -37,8 +37,6 @@ data:
         K8S-Logging.Exclude Off
         K8S-Logging.Parser Off
 
-
-
     [OUTPUT]
         # Name grafana-loki
         # Match *
