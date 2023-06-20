@@ -4,9 +4,7 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 
-- ./httpr/httpr-namespace.yaml
-- ./httpr/httpr-deployment.yaml
-
+- ./httpr/httpr.yaml
 - ./httpr/collector.yaml
 
 - ./httpr/prometheus-deployment.yaml
@@ -17,9 +15,7 @@ resources:
 - ./httpr/grafana-service.yaml
 - ./httpr/grafana-config.yaml
 
-- ./httpr/jaeger-deployment.yaml
-- ./httpr/jaeger-service.yaml
-- ./httpr/jaeger-config.yaml
+- ./httpr/jaeger.yaml
 
 - ./httpr/loki-deployment.yaml
 - ./httpr/loki-service.yaml

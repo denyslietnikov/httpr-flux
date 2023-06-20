@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -53,3 +54,69 @@ spec:
           configMap:
             name: sampling-strategies
 status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.28.0 (c4137012e)
+  labels:
+    io.kompose.service: jaeger
+  name: jaeger
+  namespace: httpr
+spec:
+  ports:
+    - name: "14250"
+      port: 14250
+      targetPort: 14250
+    - name: "14268"
+      port: 14268
+      targetPort: 14268
+    - name: "6831"
+      port: 6831
+      protocol: UDP
+      targetPort: 6831
+    - name: "16686"
+      port: 16686
+      targetPort: 16686
+    - name: "16685"
+      port: 16685
+      targetPort: 16685
+  selector:
+    io.kompose.service: jaeger
+status:
+  loadBalancer: {}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jaeger-ui
+  namespace: httpr
+data:
+  jaeger-ui.json: |
+   {
+     "monitor": {
+       "menuEnabled": true
+     },
+     "dependencies": {
+       "menuEnabled": true
+     }
+   }
+   
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sampling-strategies
+  namespace: httpr
+data:
+  sampling_strategies.json: |
+   {
+     "default_strategy": {
+       "type": "probabilistic",
+       "param": 1
+      }
+   }
