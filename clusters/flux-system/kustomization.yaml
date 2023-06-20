@@ -7,7 +7,6 @@ resources:
 - ./httpr/httpr-namespace.yaml
 - ./httpr/httpr-deployment.yaml
 
-
 - ./httpr/collector.yaml
 
 - ./httpr/prometheus-deployment.yaml
@@ -26,7 +25,7 @@ resources:
 - ./httpr/loki-service.yaml
 - ./httpr/loki-config.yaml
 
-#- ./httpr/fluentbit-configmap-loki.yaml
-#- ./httpr/fluentbit-ds.yaml
-#- ./httpr/fluentbit-service.yaml
-#- ./httpr/fluentbit-serviceaccount.yaml
+- ./httpr/fluentbit-configmap-loki.yaml
+- ./httpr/fluentbit-ds.yaml
+- ./httpr/fluentbit-service.yaml
+- ./httpr/fluentbit-serviceaccount.yaml
