@@ -9,10 +9,8 @@ resources:
 - ./httpr/httpr-deployment.yaml
 
 
-- ./httpr/collector-deployment.yaml
-- ./httpr/collector-service.yaml
-- ./httpr/collector-config.yaml
-- ./httpr/otel-default-networkpolicy.yaml
+- ./httpr/collector.yaml
+#- ./httpr/otel-default-networkpolicy.yaml
 
 - ./httpr/prometheus-deployment.yaml
 - ./httpr/prometheus-service.yaml
@@ -30,18 +28,7 @@ resources:
 - ./httpr/loki-service.yaml
 - ./httpr/loki-config.yaml
 
-#- ./httpr/fluentbit-deployment.yaml
-#- ./httpr/fluentbit-service.yaml
-#- ./httpr/fluentbit-config.yaml
-
-#- ./httpr/fluentbit-configmap.yaml
-#- ./httpr/fluentbit-gke.yaml
-#- ./httpr/fluentbit-role-binding.yaml
-#- ./httpr/fluentbit-role.yaml
-#- ./httpr/fluentbit-service-account.yaml
-
 - ./httpr/fluentbit-configmap-loki.yaml
 - ./httpr/fluentbit-ds.yaml
 - ./httpr/fluentbit-service.yaml
 - ./httpr/fluentbit-serviceaccount.yaml
-#- ./httpr/fluentbit-configmap-template.yaml

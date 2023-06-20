@@ -8,25 +8,26 @@ metadata:
     app: fluent-bit-loki
     chart: fluent-bit-2.2.0
     heritage: Helm
+  #name: loki-fluent-bit-loki
   name: fluent-bit
   namespace: httpr
 data:
   fluent-bit.conf: |-
     [SERVICE]
-        #HTTP_Server    On
-        #HTTP_Listen    0.0.0.0
-        #HTTP_PORT      2020
-        flush          1
-        #Daemon         Off
+        HTTP_Server    On
+        HTTP_Listen    0.0.0.0
+        HTTP_PORT      2020
+        Flush          1
+        Daemon         Off
         Log_Level      warn
-        #Parsers_File   parsers.conf
+        Parsers_File   parsers.conf
 
     [INPUT]
         Name           tail
         Tag            kube.*
         Path           /var/log/containers/*.log
         Parser         docker
-        #DB             /run/fluent-bit/flb_kube.db
+        # DB             /run/fluent-bit/flb_kube.db
         Mem_Buf_Limit  5MB
 
     [FILTER]
@@ -37,7 +38,20 @@ data:
         K8S-Logging.Exclude Off
         K8S-Logging.Parser Off
 
-    [OUTPUT]       
+    [OUTPUT]
+        # Name grafana-loki
+        # Match *
+        # Url http://loki:3100/api/prom/push
+        # TenantID ""
+        # BatchWait 1
+        # BatchSize 1048576
+        # Labels {job="fluent-bit",stream=$stream }
+        # RemoveKeys kubernetes,stream
+        # AutoKubernetesLabels true
+        # LabelMapPath /fluent-bit/etc/labelmap.json
+        # LineFormat json
+        # LogLevel warn'
+        
         Name opentelemetry
         Match                *
         Host                 collector
