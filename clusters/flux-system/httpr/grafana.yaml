@@ -89,6 +89,7 @@ data:
       basicAuth: false
       readOnly: false
       isDefault: false
+      editable: true
 
 ---
 apiVersion: v1
