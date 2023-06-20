@@ -10,7 +10,6 @@ resources:
 
 
 - ./httpr/collector.yaml
-#- ./httpr/otel-default-networkpolicy.yaml
 
 - ./httpr/prometheus-deployment.yaml
 - ./httpr/prometheus-service.yaml
