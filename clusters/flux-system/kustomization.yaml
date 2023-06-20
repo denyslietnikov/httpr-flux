@@ -5,7 +5,6 @@ resources:
 - gotk-sync.yaml
 
 - ./httpr/httpr-namespace.yaml
-- ./httpr/httpr-service.yaml
 - ./httpr/httpr-deployment.yaml
 
 
