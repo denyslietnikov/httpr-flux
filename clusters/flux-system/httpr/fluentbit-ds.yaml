@@ -99,9 +99,7 @@ spec:
           path: /etc/machine-id
           type: File
         name: etcmachineid
-  strategy:
-    type: Recreate
-  #updateStrategy:
-  #  rollingUpdate:
-  #    maxUnavailable: 1
-  #  type: RollingUpdate
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
