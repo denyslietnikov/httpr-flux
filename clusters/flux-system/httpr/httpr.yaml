@@ -29,10 +29,10 @@ spec:
             - name: METRICS_HOST
               value: collector:4317
             - name: VERSION
-              value: v1.0.0-92a5401
+              value: v1.0.0-83f1923
             - name: OTEL_SERVICE_NAME
               value: httpr
-          image: docker.io/dletnikov/httpr.git:v1.0.0-92a5401-amd64
+          image: docker.io/dletnikov/httpr.git:v1.0.0-83f1923-amd64
           name: httpr
           ports:
             - containerPort: 8181
