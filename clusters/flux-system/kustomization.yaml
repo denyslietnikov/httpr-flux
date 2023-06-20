@@ -26,7 +26,7 @@ resources:
 - ./httpr/loki-service.yaml
 - ./httpr/loki-config.yaml
 
-- ./httpr/fluentbit-configmap-loki.yaml
-- ./httpr/fluentbit-ds.yaml
-- ./httpr/fluentbit-service.yaml
-- ./httpr/fluentbit-serviceaccount.yaml
+#- ./httpr/fluentbit-configmap-loki.yaml
+#- ./httpr/fluentbit-ds.yaml
+#- ./httpr/fluentbit-service.yaml
+#- ./httpr/fluentbit-serviceaccount.yaml
