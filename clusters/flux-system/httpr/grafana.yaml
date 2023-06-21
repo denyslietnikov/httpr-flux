@@ -87,7 +87,7 @@ data:
         - datasourceUid: my-jaeger
           matcherRegex: "TraceID\\s+(\\w+)"
           url: '$${__value.raw}'
-          name: TraceID2
+          name: TraceID
     - name: Jaeger
       type: jaeger
       uid: my-jaeger
