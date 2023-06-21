@@ -85,7 +85,7 @@ data:
       jsonData:
         derivedFields:
         - datasourceUid: my-jaeger
-          matchRegex: "TraceID\\s+(\\w+)"
+          matchRegex: TraceID\\s+(\\w+)
           url: '$${__value.raw}'
           name: TraceID
     - name: Jaeger

@@ -13,4 +13,4 @@ resources:
 - ./httpr/loki.yaml
 - ./httpr/prometheus.yaml
 - ./httpr/grafana.yaml
-- ./httpr/fluentbit-ds.yaml
+#- ./httpr/fluentbit-ds.yaml
